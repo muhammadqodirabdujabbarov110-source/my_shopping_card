@@ -47,3 +47,32 @@ document.querySelectorAll(".shopping-cart .qty").forEach(qtyBox => {
 
 updateTableOnly();
 
+
+
+
+
+// Barcha modal tugmalarini olish
+document.querySelectorAll(".btn-modal").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.getAttribute("data-target");
+    document.getElementById(target).classList.add("opened");
+  });
+});
+
+// Har bir overlay uchun yopish funksiyasi
+document.querySelectorAll(".overlay-modal").forEach(overlay => {
+  const closeBtn = overlay.querySelector(".close-btn");
+  
+  // Yopish tugmasi bosilganda
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.remove("opened");
+  });
+
+  // Overlay foniga bosilganda yopilsin
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove("opened");
+    }
+  });
+});
+

@@ -1,4 +1,143 @@
-/* ---------------- Navbar ---------------- */
+
+
+
+
+
+
+/* Overlay */
+.overlay-modal {
+  display: none;                 
+  position: fixed;               
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);   
+  justify-content: center;       
+  align-items: center;           
+  z-index: 1000;
+  opacity: 0;                    
+  transition: opacity 0.3s ease;
+}
+
+.overlay-modal.opened {
+  display: flex; 
+  opacity: 1;
+}
+
+/* Modal oynasi */
+.newsletter-modal {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 700px;
+  width: 90%;                     
+  display: flex;
+  flex-direction: row;            
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  position: relative;
+  font-family: Arial, sans-serif;
+  transform: scale(0.8);          
+  transition: transform 0.3s ease;
+}
+
+.overlay-modal.opened .newsletter-modal {
+  transform: scale(1);            
+}
+
+/* Yopish tugmasi */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Chap tomonda rasm */
+.newsletter-image {
+  flex: 1;
+  background: #00b34d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* O‘ng tomonda matn */
+.newsletter-content {
+  flex: 1.2;
+  padding: 30px;
+}
+
+.newsletter-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.newsletter-content p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.newsletter-content p span {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Form */
+.newsletter-content form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.newsletter-content input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.newsletter-content button {
+  background: #00b300;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter-content button:hover {
+  background: #009900;
+}
+
+.checkbox {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter-modal {
+    flex-direction: column;
+    max-width: 95%;
+  }
+  .newsletter-image {
+    display: none;
+  }
+}
+
+
+
+/* ================================================= */
 .navbar-custom {
   background-color: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);

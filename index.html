@@ -38,7 +38,43 @@
         <a href="#" class="icon-btn me-3"><i class="far fa-heart"></i></a>
         <div class="vr me-3"></div>
         <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
-          <i class="fa-solid fa-bag-shopping me-2"></i>
+          <div class="btn-div">
+          <div class="btn-div">
+      
+
+
+            
+<!-- Modalni ochuvchi tugma -->
+  <button class="button_nav btn-modal" data-target="overlay-modal">
+    <i class="fa-solid fa-bag-shopping me-2"></i>
+  </button>
+
+  <!-- Overlay va Modal -->
+  <div class="overlay-modal" id="overlay-modal">
+    <div class="newsletter-modal" id="modal">
+      <button class="close-btn">&times;</button>
+      <div class="newsletter-image">
+        <img src="./imgs/BG (1).png" alt="Basket with vegetables">
+      </div>
+      <div class="newsletter-content">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>
+          Subscribe to our newsletter and Save your 
+          <span>20% money</span> with discount code today.
+        </p>
+        <form>
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <label class="checkbox">
+          <input type="checkbox"> Do not show this window
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+           <!--  fdf -->
           <div class="cart-box d-flex flex-column">
             <small>Shopping Cart:</small>
             <strong>$57.00</strong>
@@ -47,6 +83,11 @@
       </div>
     </div>
   </nav>
+
+
+
+
+
 
   <!-- ================= Main Navbar ================= -->
   <nav class="navbar navbar-expand-lg navbar-menu">
